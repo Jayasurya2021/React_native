@@ -1,6 +1,6 @@
-import axios from 'axios'
-import { useState } from 'react'
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { router } from "expo-router";
+import { useState } from 'react';
+import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 const Login = () => {
 
 
@@ -17,14 +17,11 @@ const Login = () => {
             if (res) {
                 setEmail("")
                 alert("succesfully")
-                // router.push("/otpverification")
+                router.push("/otpverification")
             }
         } catch (error) {
             console.log(error)
         }
-
-
-
     }
     return (
 
