@@ -4,10 +4,13 @@ import {
   ScrollView,
   Text,
   TextInput,
+  TouchableHighlight,
+  TouchableOpacity,
   View,
 } from "react-native";
 
 import { useState } from "react";
+import { TouchableWithoutFeedback } from "react-native";
 
 export default function Home() {
 
@@ -56,6 +59,7 @@ export default function Home() {
         </Text>
 
         <View className="flex-row justify-between mt-4">
+
 
           <Pressable className="bg-blue-100 w-[30%] p-4 rounded-2xl items-center">
             <Text className="text-2xl">💻</Text>
@@ -145,6 +149,26 @@ export default function Home() {
           </View>
 
         </View>
+      </View>
+      <View>
+        <TouchableOpacity underlayColor="#d97706" onPress={() => alert("click")}>
+          <View className="m-4 rounded-3xl bg-amber-400">
+            <Text className="bg-amber-400 p-4 text-center text-xl text-amber-50" >
+              TouchableOpacity
+            </Text>
+          </View>
+
+        </TouchableOpacity>
+        <TouchableHighlight onPress={() => alert("touchable highlight")}>
+          <Text className="bg-amber-400 p-4 m-4 text-center text-xl rounded-2xl text-white ">
+            TouchableHighlight
+          </Text>
+        </TouchableHighlight>
+        <TouchableWithoutFeedback onPress={() => alert("TouchableWithoutFeedback")}>
+          <Text className="bg-amber-400 p-4 m-4 text-center text-xl border-2 border-amber-50 rounded-2xl text-amber-50">
+            TouchableWithoutFeedback
+          </Text>
+        </TouchableWithoutFeedback>
       </View>
 
     </ScrollView>
