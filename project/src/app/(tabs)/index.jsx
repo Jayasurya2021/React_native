@@ -152,12 +152,10 @@ export default function Home() {
       </View>
       <View>
         <TouchableOpacity underlayColor="#d97706" onPress={() => alert("click")}>
-          <View className="m-4 rounded-3xl bg-amber-400">
-            <Text className="bg-amber-400 p-4 text-center text-xl text-amber-50" >
-              TouchableOpacity
-            </Text>
-          </View>
 
+          <Text className="bg-amber-400 p-4 m-4 text-center text-xl border-2 border-amber-50 rounded-2xl text-amber-50" >
+            TouchableOpacity
+          </Text>
         </TouchableOpacity>
         <TouchableHighlight onPress={() => alert("touchable highlight")}>
           <Text className="bg-amber-400 p-4 m-4 text-center text-xl rounded-2xl text-white ">
